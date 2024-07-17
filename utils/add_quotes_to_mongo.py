@@ -11,7 +11,7 @@ print('Loading quotes to mongo...')
 
 with open('utils/quotes-09.json', 'r', encoding='utf-8') as fd:
     quotes = json.load(fd)
-    db.quotes.delete_many({})#lazytest:Очистка коллекции перед вставкой новых данных
+    #db.quotes.delete_many({})#lazytest:Очистка коллекции перед вставкой новых данных
 
 for quote in quotes:
     author = db.authors.find_one({'fullname': quote['author']})
