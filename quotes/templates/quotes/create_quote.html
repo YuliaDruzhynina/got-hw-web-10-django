@@ -1,0 +1,16 @@
+
+{% extends "quotes/base.html" %}
+
+{% block content %}
+<form method="POST" action="{% url 'quotes:create_quote' %}">
+    {% csrf_token %}
+    <div>
+        {{ form.as_p }}
+    </div>
+
+    <div class="grid">
+        <button type="submit">Submit</button>
+        <button type="reset" class="secondary">Reset</button>
+    </div>
+</form>
+{% endblock %}

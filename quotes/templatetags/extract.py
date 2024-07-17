@@ -1,6 +1,6 @@
 from django import template
 from bson.objectid import ObjectId
-from quotes.utils import get_mongodb
+from quotes.utils_mongo import get_mongodb
 
 register=template.Library()
 
